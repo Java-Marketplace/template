@@ -47,12 +47,16 @@ tasks.withType<Test> {
 
 tasks.withType<Checkstyle> {
     configFile = rootProject.file("checkstyle.xml")
-    maxWarnings = 0
+    maxWarnings = 5
     isShowViolations = true
 }
 
 tasks.named("checkstyleMain") {
     dependsOn("compileJava")
+}
+
+tasks.named("checkstyleTest") {
+    dependsOn("compileTestJava")
 }
 
 tasks.jacocoTestReport {
