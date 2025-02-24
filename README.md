@@ -4,3 +4,5 @@
 3. Замените проект в sonar-project.properties на ваш (нужно создать в SonarCloud)
 4. Добавьте SONAR_TOKEN в Variables в Github репозитории микросервиса (так же из SonarCloud берется) 
 5. Удалите данный файл после настройки
+
+### Test PR ###
