@@ -15,6 +15,10 @@ java {
     }
 }
 
+jacoco {
+    toolVersion = "0.8.11"
+}
+
 configurations {
     compileOnly {
         extendsFrom(configurations.annotationProcessor.get())
@@ -66,16 +70,11 @@ tasks.jacocoTestReport {
         html.required = true
         csv.required = false
     }
-
-    classDirectories.setFrom(files(classDirectories.files.map {
-        fileTree(it) {
-            include(
-                "**/service/**",
-                "**/controller/**",
-                "**/repository/**"
-            )
+    executionData.setFrom(
+        fileTree(layout.buildDirectory) {
+            include("jacoco/*.exec")
         }
-    }))
+    )
 }
 
 tasks.test {
