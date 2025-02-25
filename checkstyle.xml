@@ -27,7 +27,7 @@
     <module name="TreeWalker">
         <!-- Отступы -->
         <module name="Indentation">
-            <property name="basicOffset" value="2"/>
+            <property name="basicOffset" value="4"/>
             <property name="braceAdjustment" value="0"/> <!-- Скобки на той же строке -->
             <property name="lineWrappingIndentation" value="4"/>
         </module>
