@@ -50,7 +50,7 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Build and Test with Gradle
+      - name: Build with Gradle
         run: ./gradlew build --no-daemon
 
       - name: Unit Tests with Gradle
