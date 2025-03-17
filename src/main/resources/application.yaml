@@ -1,6 +1,6 @@
 spring:
   application:
-    name: templatemicroservice
+    name: template-service
 
   datasource:
     url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
@@ -19,3 +19,6 @@ spring:
         show_sql: true
     hibernate:
       ddl-auto: none
+
+  liquibase:
+    enabled: false
